@@ -4,9 +4,6 @@ import {HiOutlineUser , HiOutlineShoppingBag, HiBars3BottomRight} from "react-ic
 import SearchBar from './SearchBar';
 import CartDrawer from '../Layout/CartDrawer';
 import { IoMdClose } from 'react-icons/io';
-
-
-
 const Navbar = () => {
     const [drawerOpen, setDrawerOpen]= useState(false);
     const [navDrawerOpen, setNavDrawerOpen]= useState(false);
@@ -26,7 +23,7 @@ const Navbar = () => {
             </Link>
         </div>
         <div className="hidden md:flex space-x-6">
-            <Link to="#" className="text-gray-700 hover:text-black text-sm font-medium uppercase">
+            <Link to="/collections/all" className="text-gray-700 hover:text-black text-sm font-medium uppercase">
             Men
             </Link>
             <Link to="#" className="text-gray-700 hover:text-black text-sm font-medium uppercase">
@@ -42,14 +39,12 @@ const Navbar = () => {
             </Link>
 
         </div>
-
         {/*right icons */}
         <div className="flex items-center space-x-4">
-           <Link to="/profile" className="hover:text-black">
+            <Link to="/admin" className="block bg-black px-2 rounded text-sm text-white">Admin</Link>
+           <Link to="/login" className="hover:text-black">
            <HiOutlineUser  className="h-6 w-6 text-gray-700" />
-           
            </Link>
-
            <button onClick={toggleCartDrawer} 
            className="relative hover:text-black">
               <HiOutlineShoppingBag className="h-6 w-6 text-gray-700" />
@@ -86,6 +81,7 @@ const Navbar = () => {
                     <Link to="#" onClick={toggleNavDrawer} className="block text-gray-600 hover:text-black"> Bottom Wear</Link>
 
                 </nav>
+                
             </div>
      </div>
     </>
