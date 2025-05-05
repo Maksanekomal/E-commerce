@@ -17,6 +17,9 @@ import OrderDetailsPage from './Pages/OrderDetailsPage'
 import MyOrdersPage from './Pages/MyOrdersPage'
 import AdminLayout from './components/Admin/AdminLayout'
 import AdminHomePage from './Pages/AdminHomePage'
+import UserManagement from './components/Admin/UserManagement'
+import ProductManagement from './components/Admin/ProductManagement'
+import EditProduct from './components/Admin/EditProduct'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -35,11 +38,17 @@ function App() {
       <Route path="order-confirmation" element={<OrderConfirmationPage />} />
       <Route path="order/:id" element={<OrderDetailsPage />} />
       <Route path="my-orders" element={<MyOrdersPage />} />
-      <Route path="/admin" element={<AdminLayout />} />
+      </Route>
+             {/* Admin Layout and Routes */}
+      <Route path="/admin" element={<AdminLayout />}>
       <Route index element={<AdminHomePage />} />
+      <Route path="users" element={<UserManagement />} />
+      <Route path="products" element={<ProductManagement />} />
+      <Route path="products/:id/edit" element={<EditProduct />} />
       </Route>
 
-      <Route>{/* Admin Layout */}</Route>
+
+
     </Routes>
     </BrowserRouter>
   )
