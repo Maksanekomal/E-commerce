@@ -1,6 +1,5 @@
 import React from 'react'
 import { FaBoxOpen, FaClipboardList, FaSignLanguage, FaSignOutAlt, FaStore, FaUser } from 'react-icons/fa'
-import { OutLet } from 'react-router-dom'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 
 const AdminSidebar = () => {
